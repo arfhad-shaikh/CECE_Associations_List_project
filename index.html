@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <Title>Proffessional Associations for Students</Title>
+</head>
+<body>
+    <div class="top">
+        <h1> Professional Organizations and Associations for University Students<hr/></h1>
+      </div>
+      
+    <div class="sidebar">
+        <!--
+        <a class="active" href="#home">Professional Studies</a>
+        <a href="#news">Science</a>
+        <a href="#contact">Arts</a>
+        --> 
+        
+      
+        <a class="active" href="index.html">Home</a>
+      <button class="dropdown-btn">Professional Studies
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Accounting</a>
+        <a href="#">Administration</a>
+        <a href="#">Adult Education</a>
+        <a href="#">Agriculture Management</a>
+        <a href="#">Business Administration</a>
+        <a href="#">Computer Science/
+                    Computer Information Systems</a>
+        <a href="#">Early Education</a> 
+        <a href="#">Education</a>
+        <a href="#">Social Service Worker</a>
+      </div>
+
+      <button class="dropdown-btn">Science
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Biology</a>
+        <a href="#">Chemistry</a>
+        <a href="#">Civil Engineering</a>
+        <a href="#">Computer & Electrical Engineering</a>
+        <a href="#">Mechanical Engineering</a>
+        <a href="#">General Studies</a>
+        <a href="#">Geography</a> 
+        <a href="#">Kinesiology</a>
+        <a href="#">Math</a>
+        <a href="#">Nursing</a> 
+        <a href="#">Physics</a>
+        <a href="#">Math</a>
+      </div>
+
+
+      <!--ARTS ASSOCIATIONS ONLY-->
+      <button class="dropdown-btn">Arts
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <!--Options left out:
+        Media and Communication Studies
+        General studies
+        Aborginal Culture and Langugae Support--> 
+        <a href="#" onclick="load_adult_ed()">Adult Education</a>
+        <a href="#" onclick="load_anthropology()">Anthropology</a>
+        <a href="#" onclick="load_cyc()">Child and Youth Care</a>
+        <a href="#" onclick="load_crim()">Criminal Justice</a>
+        <a href="#">Economics</a>
+        <a href="#">English</a>
+        <a href="#">Environmental Studies</a>
+        <a href="#">French</a>
+        <a href="#">Geography</a>
+        <a href="#">Global Development Studies</a>
+        <a href="#">Graphic and Digital Design</a>
+        <a href="#">History</a>
+        <a href="#">Indigenous Studies</a>
+        <a href="#">Integrated Studies</a>
+        <a href="#">International and Development Studies</a>
+        <a href="#">Math</a>
+        <a href="#">Media Arts</a>
+        <a href="#">Peace and Conflict Studies</a>
+        <a href="#">Philosophy</a>
+        <a href="#">Political Science</a>
+        <a href="#">Psychology</a>
+        <a href="#">Sociology</a>
+        <a href="#">Theatre</a>
+        <a href="#">Visual Arts</a>
+      </div>
+    </div>
+
+      <div id="content" class="content">
+        <ul>
+                <li> Start by selecting your field of study.</li>
+                <li> Click on your program area.</li>
+                <li> View the list of professional associations for students.</li>
+        </ul>       
+      </div>
+</body>
+
+<script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+
+    /*ARTS ASSCIATIONS ONLY*/
+    function load_adult_ed() //Adult Education
+    {
+        var frame = document.getElementById("content");
+            document.getElementById("content").innerHTML='<object type="text/html" data="adult_ed.html" style=" height:100%; overflow-y:scroll;" width="100%" ></object>';
+    }
+
+    function load_anthropology() //Anthropology
+    {
+        var frame = document.getElementById("content");
+            document.getElementById("content").innerHTML='<object type="text/html" data="anthropology.html" style=" height:100%; overflow-y:scroll;" width="100%" ></object>';
+    }
+
+    function load_cyc() //Child & Youth Care
+    {
+        var frame = document.getElementById("content");
+            document.getElementById("content").innerHTML='<object type="text/html" data="cyc.html" style=" height:100%; overflow-y:scroll;" width="100%" ></object>';
+    }
+
+    function load_crim() //Criminal Justice
+    {
+        var frame = document.getElementById("content");
+            document.getElementById("content").innerHTML='<object type="text/html" data="crim.html" style=" height:100%; overflow-y:scroll;" width="100%" ></object>';
+    }
+    </script>
+    <!--
+https://librarianship.ca/resources/associations-student-memberships/
+https://jobstars.com/arts-professional-associations-organizations
+https://jobstars.com/professional-associations-organizations/
+https://guides.library.ucla.edu/c.php?g=180300&p=1186802
+https://guides.library.ucla.edu/
+https://www.uregina.ca/careercentre/ses/more-resources/professional-associations.html 
+https://libguides.princeton.edu/gradprofessionalorgs/arts-humanities
+    -->
+</html>

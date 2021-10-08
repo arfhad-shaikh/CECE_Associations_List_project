@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+/*------NAV & CONTENT-----*/
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  background-color: #f1f1f1;
+  position: fixed;
+  overflow: auto;
+  font-size: 20px;
+  
+}
+
+.sidebar a, .dropdown-btn {
+  display: block;
+  color: black;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+ 
+.dropdown-btn {
+    display: block;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 6px 8px 6px 16px;
+    overflow: auto;
+    text-align:left;
+    font-size: 20px;
+    outline: none;
+  }
+
+.sidebar a.active, .dropdown-btn.active {
+  background-color: #00703C;
+  color: white;
+}
+
+.sidebar a:hover:not(.active), .dropdown-btn:hover {
+  background-color: #807F83;
+  color: white;
+}
+
+div.content {
+  display: block;
+  margin-left: 250px;
+  padding: 1px 16px;
+  /*border:2px solid;*/
+  height:40vw;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+div.top{
+    padding: 1px 16px;
+}
+
+/* Large rounded green border */
+hr {
+    border: solid #8DC63F ;
+    border-radius: 5px;
+    padding: 0px;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #f1f1f1;
+    padding-left: 16px;
+    overflow-y:scroll;
+    overflow-x: auto;
+    height:25vw;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+
+li a{
+  text-decoration: none;
+  font-size:20px;
+  padding: 10px;
+  color:black;
+  line-height: 1.6;
+}
+
+li a:hover{
+  font-weight: bold;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  color:#00703C;
+}
+
+li a:active{
+  font-weight: bold;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  color:#8DC63F;
+}
